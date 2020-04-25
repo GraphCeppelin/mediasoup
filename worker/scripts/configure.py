@@ -105,7 +105,9 @@ if __name__ == '__main__':
         args.append('-Dmediasoup_asan=false')
 
     args.append('-Dnode_byteorder=' + sys.byteorder)
-
+    
+    args.append('--no-parallel')
+    
     gyp_args = list(args)
     print(gyp_args)
     run_gyp(gyp_args)
